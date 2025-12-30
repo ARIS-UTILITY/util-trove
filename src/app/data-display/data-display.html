@@ -1,0 +1,32 @@
+<!-- src/app/data-display/data-display.component.html -->
+<h2>API Data Display</h2>
+
+<div *ngIf="data">
+  <table>
+    <thead>
+      <tr>
+        <th><p><strong>User ID</strong></p></th>
+        <th><p><strong>ID</strong></p></th>
+        <th><p><strong>Title</strong></p></th>
+        <th><p><strong>Body</strong></p></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <th>{{ data.userId }}</th>
+        <td>{{ data.id }}</td>
+        <td>{{ data.title }}</td>
+        <td>{{ data.body }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- <p><strong>User ID:</strong> {{ data.userId }}</p> -->
+  <!-- <p><strong>ID:</strong> {{ data.id }}</p> -->
+  <!-- <p><strong>Title:</strong> {{ data.title }}</p> -->
+  <!-- <p><strong>Body:</strong> {{ data.body }}</p> -->
+</div>
+
+<div *ngIf="error" class="error">
+  Error: {{ error.message }}
+</div>
