@@ -1,23 +1,21 @@
 <!-- src/app/data-display/data-display.component.html -->
 <h2>API Data Display</h2>
 
-<div *ngIf="data">
+<div *ngIf="data && data.length > 0">
   <table>
     <thead>
       <tr>
-        <th><p><strong>User ID</strong></p></th>
         <th><p><strong>ID</strong></p></th>
-        <th><p><strong>Title</strong></p></th>
-        <th><p><strong>Body</strong></p></th>
+        <th><p><strong>Username</strong></p></th>
+        <th><p><strong>Email</strong></p></th>
       </tr>
     </thead>
 
     <tbody>
-      <tr>
-        <th>{{ data.userId }}</th>
-        <td>{{ data.id }}</td>
-        <td>{{ data.title }}</td>
-        <td>{{ data.body }}</td>
+      <tr *ngFor="let item of data">
+        <td>{{ item.id }}</td>
+        <td>{{ item.username }}</td>
+        <td>{{ item.email }}</td>
       </tr>
     </tbody>
   </table>

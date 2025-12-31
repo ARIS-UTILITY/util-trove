@@ -6,7 +6,9 @@ import { Observable } from 'rxjs'; // Import Observable
   providedIn: 'root',
 })
 export class Api {
-  private apiUrl = 'https://jsonplaceholder.typicode.com/posts/1'; // Example API endpoint
+  // private apiUrl = 'https://jsonplaceholder.typicode.com/posts/1'; // Example API endpoint
+  // private apiUrl = 'http://localhost:8080/getUser';
+  private apiUrl = 'https://utilities-api-6b90.onrender.com/getUser';
 
   constructor(private http: HttpClient) { }
 
